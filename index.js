@@ -14,7 +14,6 @@ if (process.argv.length < 3) {
 }
 
 function printResult(stocks) {
-  console.log('stocks', stocks);
   var toPrint = stocks.reduce(function(prev, stock) {
     // stock.el quotes in pre-market
     // stock.l quotes during the market
