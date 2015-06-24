@@ -14,10 +14,12 @@ if (process.argv.length < 3) {
 }
 
 function printResult(stocks) {
+  console.log('stocks', stocks);
   var toPrint = stocks.reduce(function(prev, stock) {
-    var l = stock.l; // close price (previous trading day)
-    var p = stock.el; // stock price in pre-market (after-hours)
-    return prev + sprintf("%s %d (%.2f%%) ", stock.t, p, (p - l) * 100/l);
+    // stock.el quotes in pre-market
+    // stock.l quotes during the market
+    var p = stock.el || stock.l; 
+    return prev + sprintf("%s %.2f (%.2f%%) ", stock.t, p, stock.cp);
   }, '');
   console.log(toPrint);
 }
