@@ -18,7 +18,7 @@ $ `gticker <symbol[,symbol]*>`
 
 ### Features
 - query multiple symbol with a single request
-- could display pre-market and after-market quotes
+- could display pre-market and after-hours quotes
 
 ### Licsense
 MIT
