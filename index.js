@@ -18,7 +18,7 @@ function printResult(stocks) {
     if (stock.el && stock.ecp) { // pre-market, after-hours
       return prev + sprintf("%s %.2f (%.2f%%) ", stock.t, stock.el, stock.ecp);
     } else {
-      return prev + sprintf("%s %.2f (%.2f%%) ", stock.t, stock.l, stock.cp);
+      return prev + sprintf("%s %.2f [%.2f%%] ", stock.t, stock.l, stock.cp);
     }
   }, '');
   console.log(toPrint);
