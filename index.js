@@ -15,10 +15,11 @@ if (process.argv.length < 3) {
 
 function printResult(stocks) {
   var toPrint = stocks.reduce(function(prev, stock) {
-    if (stock.el && stock.ecp) { // pre-market, after-hours
-      return prev + sprintf("%s %.2f (%.2f%%) ", stock.t, stock.el, stock.ecp);
-    } else {
-      return prev + sprintf("%s %.2f [%.2f%%] ", stock.t, stock.l, stock.cp);
+    console.log(stock);
+    if (stock.el && stock.ecp) {  // real-time
+      return prev + sprintf("%s %.2f [%.2f%%] ", stock.t, stock.el, stock.ecp);
+    } else { // pre-market, after-hours
+      return prev + sprintf("%s %.2f (%.2f%%) ", stock.t, stock.l, stock.cp);
     }
   }, '');
   console.log(toPrint);
