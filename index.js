@@ -15,7 +15,6 @@ if (process.argv.length < 3) {
 
 function printResult(stocks) {
   var toPrint = stocks.reduce(function(prev, stock) {
-    console.log(stock);
     if (stock.el && stock.ecp) {  // real-time
       return prev + sprintf("%s %.2f [%.2f%%] ", stock.t, stock.el, stock.ecp);
     } else { // pre-market, after-hours

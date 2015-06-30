@@ -2,7 +2,7 @@
   "author": "chunghe",
   "name": "gticker",
   "description": "command line stock ticker",
-  "version": "1.0.10",
+  "version": "1.0.12",
   "description": "",
   "main": "index.js",
   "scripts": {
