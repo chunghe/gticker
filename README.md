@@ -10,7 +10,12 @@ $ `nmp install -g gticker`
 
 
 ### Usage
-$ `gticker <symbol[,symbol]*>` 
+
+$ gticker goog
+GOOG 522.00 [0.03%]
+
+$ gticker goog,fb
+GOOG 522.00 [0.03%] FB 87.00 [0.10%]
 
 
 ### Screenshots
